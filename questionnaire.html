@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionnaire - Chanson Sur Mesure</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: white;
+      padding: 20px;
+    }
+    label, input, select, textarea {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 500px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Questionnaire</h2>
+  <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+    <label>Votre prénom :
+      <input type="text" name="prenom" required>
+    </label>
+    <label>Pour qui est cette chanson ?
+      <input type="text" name="destinataire" required>
+    </label>
+    <label>Occasion :
+      <select name="occasion" required>
+        <option value="amour">Déclaration d'amour</option>
+        <option value="anniversaire">Anniversaire</option>
+        <option value="mariage">Mariage</option>
+        <option value="autre">Autre</option>
+      </select>
+    </label>
+    <label>Quelques mots à inclure dans la chanson :
+      <textarea name="mots" rows="4"></textarea>
+    </label>
+    <label>Style musical préféré :
+      <input type="text" name="style" placeholder="Ex. : Pop, Rap, Rock, Ballade...">
+    </label>
+    <label>Email pour recevoir la chanson :
+      <input type="email" name="email" required>
+    </label>
+    <button type="submit">Envoyer ma demande</button>
+  </form>
+</body>
+</html>
